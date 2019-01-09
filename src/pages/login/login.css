@@ -1,0 +1,12 @@
+.login-form{
+    width:300px;
+    margin:0 auto;
+}
+.login-title{
+    margin: 40px 0; 
+    font-size:24px;
+    font-weight: bold; 
+}
+.login-form-submit{
+    width:100%;
+}   

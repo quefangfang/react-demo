@@ -1,0 +1,311 @@
+@charset "utf-8";
+
+/*重置滚动条样式*/
+
+html {
+  scrollbar-face-color: #c2c2c2;
+  /*滑块*/
+  scrollbar-arrow-color: #ffffff;
+  /*箭头*/
+  scrollbar-3dlight-color: #ffffff;
+  /*最外左*/
+  scrollbar-highlight-color: #ffffff;
+  /*左二*/
+  scrollbar-shadow-color: #ffffff;
+  /*右二*/
+  scrollbar-darkshadow-color: #ffffff;
+  /*最外右*/
+  scrollbar-track-color: #ffffff;
+  /*滑道*/
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c2c2c2;
+  background-clip: padding-box;
+  min-height: 28px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
+
+/* =====================全局样式===================== */
+html,
+body,
+#root,
+.ant-spin-nested-loading,
+.ant-spin-container {
+  height: 100%;
+}
+
+body {
+  font-size: 14px;
+  color: var(--body-font-color);
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    '微软雅黑', Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  outline: none;
+  text-decoration: none;
+}
+
+.cl,
+.clearfix {
+  zoom: 1;
+}
+.cl:after,
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.text-r {
+  text-align: right;
+}
+
+.text-l {
+  text-align: left;
+}
+
+.text-c {
+  text-align: center;
+}
+
+.h-auto {
+  height: auto !important;
+}
+
+/* =====================全局样式 end===================== */
+
+
+.font-size12 {
+  font-size: 12px !important;
+}
+
+.font-size13 {
+  font-size: 13px !important;
+}
+
+.font-size14 {
+  font-size: 14px !important;
+}
+
+.font-size15 {
+  font-size: 15px !important;
+}
+
+.font-size16 {
+  font-size: 16px !important;
+}
+
+.font-size17 {
+  font-size: 17px !important;
+}
+
+.font-size18 {
+  font-size: 18px !important;
+}
+
+.font-size19 {
+  font-size: 19px !important;
+}
+
+.font-size20 {
+  font-size: 20px !important;
+}
+
+.font-size21 {
+  font-size: 21px !important;
+}
+
+.font-size22 {
+  font-size: 22px !important;
+}
+
+.font-size23 {
+  font-size: 23px !important;
+}
+
+.font-size24 {
+  font-size: 24px !important;
+}
+
+.font-size26 {
+  font-size: 26px !important;
+}
+
+.font-size28 {
+  font-size: 28px !important;
+}
+
+.font-size30 {
+  font-size: 30px !important;
+}
+
+.font-size32 {
+  font-size: 32px !important;
+}
+
+.font-size34 {
+  font-size: 34px !important;
+}
+
+.font-size36 {
+  font-size: 36px !important;
+}
+
+/*icon定位高度调整*/
+
+.icon-t-1 {
+  position: relative;
+  top: -1px;
+}
+
+.icon-t-2 {
+  position: relative;
+  top: -2px;
+}
+
+.icon-t-3 {
+  position: relative;
+  top: -3px;
+}
+
+.icon-t-4 {
+  position: relative;
+  top: -4px;
+}
+
+.icon-t-5 {
+  position: relative;
+  top: -5px;
+}
+
+.icon-t1 {
+  position: relative;
+  top: 1px;
+}
+
+.icon-t2 {
+  position: relative;
+  top: 2px;
+}
+
+.icon-t3 {
+  position: relative;
+  top: 3px;
+}
+
+.icon-t4 {
+  position: relative;
+  top: 4px;
+}
+
+.icon-t5 {
+  position: relative;
+  top: 5px;
+}
+
+/* 文字占位 */
+.placeholder {
+  color: transparent;
+  text-indent: -9999px;
+  visibility: hidden;
+}
+
+/* 加粗 */
+.font-weight {
+  font-weight: 700;
+}
+
+/* 显示为内敛块级元素 */
+.inlineblock {
+  display: inline-block !important;
+}
+
+/* a标签hover去掉下划线 */
+.no-decoration:hover {
+  text-decoration: none;
+}
+
+/* 单行文本超出隐藏 */
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 备注多行文本 撑高 */
+.memo-wrap {
+  overflow: hidden;
+  margin-top: -22px;
+  visibility: hidden;
+}
+.ant-layout{
+    height:100%;
+}
+.logo{
+    background:#fff;
+    height:64px;
+    font-size:16px;
+    text-align: center;
+    box-shadow: 0 0 4px #aaa;
+}
+.logo img{
+    display: inline-block;
+    width:50px;
+    height:50px;
+    margin:7px auto;
+}
+.avatar img{
+    width:24px;
+    height:29px;
+}
+.ant-menu-item, .ant-menu-item.ant-menu-item-selected{
+    margin-top:0 !important
+}
+.breadcumb-box .ant-breadcrumb{
+    line-height:64px;
+}
+/* --------------公用部分 end----------------*/

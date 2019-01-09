@@ -1,0 +1,22 @@
+.ant-form.basic-form-box{
+    margin: 20px;
+}
+.steps-content{
+    margin: 30px 0 0 0;
+}
+.form-confirm{
+    line-height:32px;
+}
+.btn-group{
+    margin:20px 0;
+}
+.btn-group .ant-btn-primary{
+    margin:0 20px 0 0;
+}
+.advance-form{
+    margin:20px;
+    background:#fff;
+}
+.advance-form .saveAll{
+    margin:20px;
+}
