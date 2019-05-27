@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Layout, } from 'antd';
-import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 import asyncComponent from '@/utils/asyncComponent';
 // import HeaderLayout from '@/components/Head';
@@ -22,7 +21,7 @@ class App extends Component {
             collapsed: !this.state.collapsed,
         });
     }
-    render() {
+    render () {
         return (
             <Layout>
                 <Sider collapsed={this.state.collapsed}>

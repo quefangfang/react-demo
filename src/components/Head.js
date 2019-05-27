@@ -12,15 +12,15 @@ class Head extends Component {
         user: '',
         visible: false,
     };
-    handleLogout() {
+    handleLogout () {
         window.location.hash = '#login';
     }
-    render() {
+    render () {
         const menuActive = this.props.menuActive;
-        let openKeys = routes.menus.filter(item => item.key == menuActive.openKeys)
+        let openKeys = routes.menus.filter(item => item.key === menuActive.openKeys)
         let selectedKey = [];
         if (openKeys[0].subs) {
-            selectedKey = openKeys[0].subs.filter(item => item.key == menuActive.selectedKey)
+            selectedKey = openKeys[0].subs.filter(item => item.key === menuActive.selectedKey)
         }
         return (
             <Header className="custom-theme header" >

@@ -59,8 +59,8 @@ axios.interceptors.response.use(
     },
     error => {
         // 关闭loaading
-        if (loadingCount != 0) loadingCount--;
-        if (loadingCount == 0) {
+        if (loadingCount !== 0) loadingCount--;
+        if (loadingCount === 0) {
             dispatch({
                 type: 'SETLOADING',
                 value: false
@@ -95,7 +95,7 @@ axios.interceptors.response.use(
             return Promise.reject(error.response.data || '请求异常');
         } else if (error.request) {
             // 已正常发出请求 但未收到响应
-            if (error.message == 'Network Error') {
+            if (error.message === 'Network Error') {
                 // Network Error
                 Message.error('无法连接服务器，请检查您的网络连接或联系客服');
                 return Promise.reject('无法连接服务器，请检查您的网络连接或联系客服');

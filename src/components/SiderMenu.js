@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { Component } from 'react';
 import { Menu, Icon } from 'antd';
 import { connect } from 'react-redux';
@@ -24,7 +25,7 @@ class SiderMenu extends Component {
             openKeys: e.keyPath[e.keyPath.length - 1]
         })
     }
-    componentDidMount() {
+    componentDidMount () {
         const { location } = this.props;
         const pathname = location.pathname;
         const pathArr = pathname.split('/')
@@ -40,7 +41,7 @@ class SiderMenu extends Component {
             openKeys: openKeys
         })
     }
-    render() {
+    render () {
         const { location } = this.props;
         let openKeys = this.state.openKeys
         let current = this.state.current

@@ -76,7 +76,7 @@ class BasicForm extends Component {
         this.setState({ autoCompleteResult });
     }
 
-    render() {
+    render () {
         const { getFieldDecorator } = this.props.form;
         const { autoCompleteResult } = this.state;
 
@@ -217,7 +217,7 @@ class BasicForm extends Component {
                     {getFieldDecorator('agreement', {
                         valuePropName: 'checked',
                     })(
-                        <Checkbox>I have read the <a>agreement</a></Checkbox>
+                        <Checkbox>I have read the agreement</Checkbox>
                     )}
                 </FormItem>
                 <FormItem {...tailFormItemLayout}>

@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react'
 import { Table, Input, InputNumber, Popconfirm, Form, Divider, Button } from 'antd';
 import axios from '@/utils/axios';
@@ -20,7 +22,7 @@ class EditableCell extends Component {
         return <Input />;
     };
 
-    render() {
+    render () {
         const {
             editing,
             dataIndex,
@@ -56,7 +58,7 @@ class EditableCell extends Component {
 }
 
 class EditableTable extends Component {
-    constructor(props) {
+    constructor (props) {
         super(props);
         this.state = { data: [], editingKey: '', selectedRowKeys: [] };
         this.columns = [
@@ -89,7 +91,9 @@ class EditableTable extends Component {
                                 <span>
                                     <EditableContext.Consumer>
                                         {form => (
+                                            // eslint-disable-next-line jsx-a11y/anchor-is-valid
                                             <a
+                                                // eslint-disable-next-line no-script-url
                                                 href="javascript:;"
                                                 onClick={() => this.save(form, record.key)}
                                                 style={{ marginRight: 8 }}
@@ -102,7 +106,7 @@ class EditableTable extends Component {
                                         title="Sure to cancel?"
                                         onConfirm={() => this.cancel(record.key)}
                                     >
-                                        <a>Cancel</a>
+                                        {/* <a>Cancel</a> */}
                                     </Popconfirm>
                                 </span>
                             ) : (
@@ -118,10 +122,10 @@ class EditableTable extends Component {
             },
         ];
     }
-    componentDidMount() {
+    componentDidMount () {
         this.handleSearch()
     }
-    async handleSearch() {
+    async handleSearch () {
         let result = await axios.get('mockData/mockForm.json');
         if (result.length > 0) {
             this.setState({
@@ -136,7 +140,7 @@ class EditableTable extends Component {
         });
     }
     // 批量删除
-    handleDel() {
+    handleDel () {
         const { selectedRowKeys } = this.state
         const newList = [...this.state.data]
         selectedRowKeys.map(element => {
@@ -151,7 +155,7 @@ class EditableTable extends Component {
     cancel = () => {
         this.setState({ editingKey: '' });
     }
-    handleAdd() {
+    handleAdd () {
         const { data } = this.state;
         const count = +data[data.length - 1].key + 1;
         const newData = {
@@ -165,7 +169,7 @@ class EditableTable extends Component {
             editingKey: count
         });
     }
-    save(form, key) {
+    save (form, key) {
         form.validateFields((error, row) => {
             if (error) {
                 return;
@@ -186,19 +190,19 @@ class EditableTable extends Component {
         });
     }
 
-    edit(key) {
+    edit (key) {
         this.setState({ editingKey: key });
     }
-    delete(key) {
+    delete (key) {
         const data = [...this.state.data];
         this.setState({ data: data.filter(item => item.key !== key) });
     }
-    saveAll() {
+    saveAll () {
         const { data } = this.state
         console.log(data)
         // TODO 保存数据
     }
-    render() {
+    render () {
         const components = {
             body: {
                 row: EditableFormRow,
